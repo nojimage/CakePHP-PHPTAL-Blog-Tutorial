@@ -4,3 +4,6 @@
 [submodule "plugins/debug_kit"]
 	path = plugins/debug_kit
 	url = https://github.com/cakephp/debug_kit.git
+[submodule "plugins/taltal"]
+	path = plugins/taltal
+	url = git://github.com/nojimage/CakePHP-TALTAL.git
