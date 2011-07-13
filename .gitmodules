@@ -1,0 +1,3 @@
+[submodule "plugins/kickstart"]
+	path = plugins/kickstart
+	url = git@elasticconsultants.info:/public/cakephp/kickstart.git
