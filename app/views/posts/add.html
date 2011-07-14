@@ -1,0 +1,18 @@
+<div class="posts form">
+    <form method="post" action="#" tal:omit-tag="">
+        <span cake:helper="form:create('Post')"/>
+        <fieldset>
+            <legend>Add Post</legend>
+            <div class="input text" cake:helper="form:input('title')"><label for="PostTitle">Title</label><input name="data[Post][title]" type="text" maxlength="50" id="PostTitle" /></div>
+            <div class="input textarea" cake:helper="form:input('body')"><label for="PostBody">Body</label><textarea name="data[Post][body]" cols="30" rows="6" id="PostBody" ></textarea></div>
+        </fieldset>
+        <div class="submit" cake:helper="form:submit('Submit')"><input type="submit" value="Submit" /></div>
+        <span cake:helper="form:end()"/>
+    </form>
+</div>
+<div class="actions">
+    <h3>Actions</h3>
+    <ul>
+        <li><a href="./" tal:attributes="href url: array('action' => 'index')">List Posts</a></li>
+    </ul>
+</div>

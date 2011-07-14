@@ -1,0 +1,24 @@
+<div class="posts view">
+    <h2>Post</h2>
+    <dl>
+        <dt class="altrow">Id</dt>
+        <dd class="altrow" tal:content="post/Post/id">1</dd>
+        <dt>Title</dt>
+        <dd tal:content="post/Post/title">タイトル</dd>
+        <dt class="altrow">Body</dt>
+        <dd class="altrow" tal:content="post/Post/body">これは、記事の本文です。</dd>
+        <dt>Created</dt>
+        <dd tal:content="post/Post/created">2011-07-13 21:51:29</dd>
+        <dt class="altrow">Modified</dt>
+        <dd class="altrow" tal:content="post/Post/modified"></dd>
+    </dl>
+</div>
+<div class="actions" tal:define="postId post/Post/id">
+    <h3>Actions</h3>
+    <ul>
+        <li><a href="#" tal:attributes="href url:array('action' => 'edit', postId)">Edit Post</a></li>
+        <li><a href="#" tal:attributes="href url:array('action' => 'delete', postId)" onclick="return confirm('Are you sure you want to delete # $postId');">Delete</a></li>
+        <li><a href="./" tal:attributes="href url: array('action' => 'index')">List Posts</a></li>
+        <li><a href="#" tal:attributes="href url:array('action' => 'add')">New Post</a></li>
+    </ul>
+</div>
