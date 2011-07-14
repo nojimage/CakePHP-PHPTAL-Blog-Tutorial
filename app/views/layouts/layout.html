@@ -1,25 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" metal:define-macro="layout">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" cake:helper="html:charset()"/>
-        <title>CakePHP: the rapid development php framework: ${title_for_layout}</title>
+        <title metal:define-slot="title_for_layout">CakePHP with PHPTAL</title>
         <tal:block cake:helper="html:meta('icon')">
             <link href="./favicon.ico" type="image/x-icon" rel="icon" />
             <link href="./favicon.ico" type="image/x-icon" rel="shortcut icon" />
         </tal:block>
         <link rel="stylesheet" type="text/css" href="./css/cake.generic.css" cake:helper="html:css('cake.generic')" />
-        <tal:block tal:replace="structure scripts_for_layout"><!-- Scripts for Layout --></tal:block>
+        <tal:block metal:define-slot="scripts_for_view"><!-- Scripts for View --></tal:block>
     </head>
     <body>
         <div id="container">
-            <div id="header">
+            <div id="header" metal:define-slot="global_header">
                 <h1><a href="https://github.com/nojimage/CakePHP-TALTAL">CakePHP with PHPTAL</a></h1>
             </div>
             <div id="content">
                 <div cake:helper="session:flash()"></div>
-                <p tal:replace="structure content_for_layout">ここにコンテンツがはいります。</p>
+                <p metal:define-slot="content_for_layout">ここにコンテンツがはいります。</p>
             </div>
-            <div id="footer">
+            <div id="footer" metal:define-slot="global_footer">
                 <a href="http://www.cakephp.org/" target="_blank"><img src="./img/cake.power.gif" alt="CakePHP: the rapid development php framework" border="0" tal:attributes="src url:/img/cake.power.gif"/></a>
             </div>
         </div>

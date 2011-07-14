@@ -1,18 +1,41 @@
-<div class="posts form">
-    <form method="post" action="#" tal:omit-tag="">
-        <span cake:helper="form:create('Post')"/>
-        <fieldset>
-            <legend>Add Post</legend>
-            <div class="input text" cake:helper="form:input('title')"><label for="PostTitle">Title</label><input name="data[Post][title]" type="text" maxlength="50" id="PostTitle" /></div>
-            <div class="input textarea" cake:helper="form:input('body')"><label for="PostBody">Body</label><textarea name="data[Post][body]" cols="30" rows="6" id="PostBody" ></textarea></div>
-        </fieldset>
-        <div class="submit" cake:helper="form:submit('Submit')"><input type="submit" value="Submit" /></div>
-        <span cake:helper="form:end()"/>
-    </form>
-</div>
-<div class="actions">
-    <h3>Actions</h3>
-    <ul>
-        <li><a href="./" tal:attributes="href url: array('action' => 'index')">List Posts</a></li>
-    </ul>
-</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" metal:use-macro="../layouts/layout.html/layout">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title metal:fill-slot="title_for_layout">CakePHP with PHPTAL: Posts List</title>
+    <link rel="stylesheet" type="text/css" href="./css/cake.generic.css"/>
+    <tal:block metal:fill-slot="scripts_for_view">
+        <!-- このページでのみ使用するCSSやスクリプトがあればここに記入します -->
+    </tal:block>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>ヘッダー</h1>
+        </div>
+        <div id="content" metal:fill-slot="content_for_layout">
+            <div class="posts form">
+                <form method="post" action="#" tal:omit-tag="">
+                    <span cake:helper="form:create('Post')"/>
+                    <fieldset>
+                        <legend>Add Post</legend>
+                        <div class="input text" cake:helper="form:input('title')"><label for="PostTitle">Title</label><input name="data[Post][title]" type="text" maxlength="50" id="PostTitle" /></div>
+                        <div class="input textarea" cake:helper="form:input('body')"><label for="PostBody">Body</label><textarea name="data[Post][body]" cols="30" rows="6" id="PostBody" ></textarea></div>
+                    </fieldset>
+                    <div class="submit" cake:helper="form:submit('Submit')"><input type="submit" value="Submit" /></div>
+                    <span cake:helper="form:end()"/>
+                </form>
+            </div>
+            <div class="actions">
+                <h3>Actions</h3>
+                <ul>
+                    <li><a href="./" tal:attributes="href url: array('action' => 'index')">List Posts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+            フッター
+        </div>
+    </div>
+</body>
+</html>
