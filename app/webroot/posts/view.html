@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title metal:fill-slot="title_for_layout">CakePHP with PHPTAL: Posts List</title>
-    <link rel="stylesheet" type="text/css" href="./css/cake.generic.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/cake.generic.css"/>
     <tal:block metal:fill-slot="scripts_for_view">
         <!-- このページでのみ使用するCSSやスクリプトがあればここに記入します -->
     </tal:block>
@@ -32,10 +32,10 @@
             <div class="actions" tal:define="postId post/Post/id">
                 <h3>Actions</h3>
                 <ul>
-                    <li><a href="#" tal:attributes="href url:array('action' => 'edit', postId)">Edit Post</a></li>
+                    <li><a href="edit.html" tal:attributes="href url:array('action' => 'edit', postId)">Edit Post</a></li>
                     <li><a href="#" tal:attributes="href url:array('action' => 'delete', postId)" onclick="return confirm('Are you sure you want to delete # $postId');">Delete</a></li>
-                    <li><a href="./" tal:attributes="href url: array('action' => 'index')">List Posts</a></li>
-                    <li><a href="#" tal:attributes="href url:array('action' => 'add')">New Post</a></li>
+                    <li><a href="index.html" tal:attributes="href url: array('action' => 'index')">List Posts</a></li>
+                    <li><a href="add.html" tal:attributes="href url:array('action' => 'add')">New Post</a></li>
                 </ul>
             </div>
 

@@ -4,10 +4,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" cake:helper="html:charset()"/>
         <title metal:define-slot="title_for_layout">CakePHP with PHPTAL</title>
         <tal:block cake:helper="html:meta('icon')">
-            <link href="./favicon.ico" type="image/x-icon" rel="icon" />
-            <link href="./favicon.ico" type="image/x-icon" rel="shortcut icon" />
+            <link href="../favicon.ico" type="image/x-icon" rel="icon" />
+            <link href="../favicon.ico" type="image/x-icon" rel="shortcut icon" />
         </tal:block>
-        <link rel="stylesheet" type="text/css" href="./css/cake.generic.css" cake:helper="html:css('cake.generic')" />
+        <link rel="stylesheet" type="text/css" href="../css/cake.generic.css" cake:helper="html:css('cake.generic')" />
         <tal:block metal:define-slot="scripts_for_view"><!-- Scripts for View --></tal:block>
     </head>
     <body>
@@ -20,7 +20,7 @@
                 <p metal:define-slot="content_for_layout">ここにコンテンツがはいります。</p>
             </div>
             <div id="footer" metal:define-slot="global_footer">
-                <a href="http://www.cakephp.org/" target="_blank"><img src="./img/cake.power.gif" alt="CakePHP: the rapid development php framework" border="0" tal:attributes="src url:/img/cake.power.gif"/></a>
+                <a href="http://www.cakephp.org/" target="_blank"><img src="../img/cake.power.gif" alt="CakePHP: the rapid development php framework" border="0" tal:attributes="src url:/img/cake.power.gif"/></a>
             </div>
         </div>
     </body>
