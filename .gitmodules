@@ -1,6 +1,3 @@
-[submodule "plugins/kickstart"]
-	path = plugins/kickstart
-	url = git@elasticconsultants.info:/public/cakephp/kickstart.git
 [submodule "plugins/debug_kit"]
 	path = plugins/debug_kit
 	url = https://github.com/cakephp/debug_kit.git
